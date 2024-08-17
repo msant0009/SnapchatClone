@@ -13,7 +13,7 @@
 		A3C313F22C710DDE0098FC05 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A3C313F12C710DDE0098FC05 /* FirebaseStorage */; };
 		A3D40DA82C71099500D67FB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D40DA72C71099500D67FB2 /* AppDelegate.swift */; };
 		A3D40DAA2C71099500D67FB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D40DA92C71099500D67FB2 /* SceneDelegate.swift */; };
-		A3D40DAC2C71099500D67FB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D40DAB2C71099500D67FB2 /* ViewController.swift */; };
+		A3D40DAC2C71099500D67FB2 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D40DAB2C71099500D67FB2 /* SignInVC.swift */; };
 		A3D40DAF2C71099500D67FB2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A3D40DAE2C71099500D67FB2 /* Base */; };
 		A3D40DB12C71099600D67FB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3D40DB02C71099600D67FB2 /* Assets.xcassets */; };
 		A3D40DB42C71099600D67FB2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A3D40DB32C71099600D67FB2 /* Base */; };
@@ -24,7 +24,7 @@
 		A3D40DA42C71099500D67FB2 /* SnapchatClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapchatClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D40DA72C71099500D67FB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3D40DA92C71099500D67FB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A3D40DAB2C71099500D67FB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A3D40DAB2C71099500D67FB2 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		A3D40DAE2C71099500D67FB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3D40DB02C71099600D67FB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3D40DB32C71099600D67FB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 			children = (
 				A3D40DA72C71099500D67FB2 /* AppDelegate.swift */,
 				A3D40DA92C71099500D67FB2 /* SceneDelegate.swift */,
-				A3D40DAB2C71099500D67FB2 /* ViewController.swift */,
+				A3D40DAB2C71099500D67FB2 /* SignInVC.swift */,
 				A3D40DAD2C71099500D67FB2 /* Main.storyboard */,
 				A3D40DB02C71099600D67FB2 /* Assets.xcassets */,
 				A3D40DB22C71099600D67FB2 /* LaunchScreen.storyboard */,
@@ -159,7 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3D40DAC2C71099500D67FB2 /* ViewController.swift in Sources */,
+				A3D40DAC2C71099500D67FB2 /* SignInVC.swift in Sources */,
 				A3D40DA82C71099500D67FB2 /* AppDelegate.swift in Sources */,
 				A3D40DAA2C71099500D67FB2 /* SceneDelegate.swift in Sources */,
 			);
