@@ -88,6 +88,7 @@
                             <constraint firstItem="uzo-Es-VRv" firstAttribute="trailing" secondItem="oy6-gy-WEo" secondAttribute="trailing" id="zx9-gv-y6m"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wci-Q3-7ys"/>
                     <connections>
                         <outlet property="emailText" destination="uzo-Es-VRv" id="xDy-W6-HbM"/>
                         <outlet property="nameText" destination="oy6-gy-WEo" id="fCD-Au-LZI"/>
@@ -174,6 +175,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="s.circle.fill" catalog="system" id="TLy-ZX-acH"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSignInVC" modalPresentationStyle="fullScreen" id="6AI-lW-qIb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YcS-Iz-cGb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -247,7 +251,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="H29-mL-Fmo">
             <objects>
-                <tabBarController id="m2z-Vm-6FY" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="m2z-Vm-6FY" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="pEh-f5-rOM"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aw9-En-ReC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
