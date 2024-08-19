@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A313EFC32C73AB150056B40B /* UserSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A313EFC22C73AB150056B40B /* UserSingleton.swift */; };
 		A3C313EC2C710DDE0098FC05 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A3C313EB2C710DDE0098FC05 /* FirebaseAnalytics */; };
 		A3C313EE2C710DDE0098FC05 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A3C313ED2C710DDE0098FC05 /* FirebaseAuth */; };
 		A3C313F02C710DDE0098FC05 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A3C313EF2C710DDE0098FC05 /* FirebaseFirestore */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A313EFC22C73AB150056B40B /* UserSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleton.swift; sourceTree = "<group>"; };
 		A3C313F32C7120E00098FC05 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		A3C313F52C7120FD0098FC05 /* UploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVC.swift; sourceTree = "<group>"; };
 		A3C313F72C71213B0098FC05 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A313EFC12C73AAF70056B40B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A313EFC22C73AB150056B40B /* UserSingleton.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A3C313F92C71214B0098FC05 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 		A3D40DA62C71099500D67FB2 /* SnapchatClone */ = {
 			isa = PBXGroup;
 			children = (
+				A313EFC12C73AAF70056B40B /* Model */,
 				A3C313FA2C7121800098FC05 /* Delegates */,
 				A3C313F92C71214B0098FC05 /* ViewControllers */,
 				A3D40DAD2C71099500D67FB2 /* Main.storyboard */,
@@ -187,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A313EFC32C73AB150056B40B /* UserSingleton.swift in Sources */,
 				A3C313F42C7120E00098FC05 /* FeedVC.swift in Sources */,
 				A3D40DAC2C71099500D67FB2 /* SignInVC.swift in Sources */,
 				A3D40DA82C71099500D67FB2 /* AppDelegate.swift in Sources */,

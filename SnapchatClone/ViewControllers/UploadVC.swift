@@ -39,6 +39,9 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     }
     
     @IBAction func uploadButtonClicked(_ sender: Any) {
+        
+        
+        
     }
     
 }
