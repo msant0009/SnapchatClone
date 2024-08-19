@@ -6,19 +6,23 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
+import FirebaseCore
 
 class UploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    @IBOutlet var imageView: UIImageView!
 
+    @IBOutlet var uploadImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        imageView.isUserInteractionEnabled = true
+        uploadImageView.isUserInteractionEnabled = true
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(choosePicture))
-        imageView.addGestureRecognizer(gestureRecognizer)
+        uploadImageView.addGestureRecognizer(gestureRecognizer)
         
     }
     
@@ -33,15 +37,74 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        imageView.image = info[.originalImage] as? UIImage
+        uploadImageView.image = info[.originalImage] as? UIImage
         self.dismiss(animated: true, completion: nil)
         
     }
     
     @IBAction func uploadButtonClicked(_ sender: Any) {
+    
+        let storage = Storage.storage()
+        let storageReference = storage.reference()
+        
+        let mediaFolder = storageReference.child("media")
+        
+        if let data = uploadImageView.image?.jpegData(compressionQuality: 0.5) {
+            let uuid = UUID().uuidString
+            let imageReference = mediaFolder.child("\(uuid).jpg")
+            
+            imageReference.putData(data, metadata: nil) { (metadata, error) in
+                if error != nil{
+                    self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
+                } else {
+                    
+                    imageReference.downloadURL {(url, error) in
+                        if error == nil{
+                            
+                            let imageUrl = url?.absoluteString
+                            
+                            let fireStore = Firestore.firestore()
+                            let snapDictionary = ["imageUrl" : imageUrl!, "snapOwner" : UserSingleton.sharedUserInfo.username, "date" : FieldValue.serverTimestamp()] as [String : Any]
+                            
+                            fireStore.collection("Snaps").addDocument(data: snapDictionary) { (error) in
+                                if error != nil{
+                                    self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
+                                } else {
+                                    self.tabBarController?.selectedIndex = 0
+                                    self.uploadImageView.image = UIImage(named: "tapBox.png")
+                                }
+                            }
+                            
+                        }
+                        
+                        
+                        
+                        
+                    }
+                    
+                    
+                    
+                }
+            }
+            
+            
+        }
+
+        
         
         
         
     }
+            
+        
+    func makeAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
+        
+        
+    }
+    }
     
-}
+

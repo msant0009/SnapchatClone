@@ -24,7 +24,7 @@ class FeedVC: UIViewController {
     
 
     func getUserInfo(){
-        fireStoreDatabase.collection("UserInfo").whereField("email", isEqualTo: Auth.auth().currentUser!.email).getDocuments { (snapshot, error) in
+        fireStoreDatabase.collection("UserInfo").whereField("email", isEqualTo: Auth.auth().currentUser!.email ?? "").getDocuments { (snapshot, error) in
             if error != nil{
                 self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
             } else{
