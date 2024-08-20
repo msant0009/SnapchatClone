@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A313EFC32C73AB150056B40B /* UserSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A313EFC22C73AB150056B40B /* UserSingleton.swift */; };
+		A378EA2B2C74E45700C74AED /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A378EA2A2C74E45700C74AED /* Snap.swift */; };
 		A3C313EC2C710DDE0098FC05 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A3C313EB2C710DDE0098FC05 /* FirebaseAnalytics */; };
 		A3C313EE2C710DDE0098FC05 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A3C313ED2C710DDE0098FC05 /* FirebaseAuth */; };
 		A3C313F02C710DDE0098FC05 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A3C313EF2C710DDE0098FC05 /* FirebaseFirestore */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		A313EFC22C73AB150056B40B /* UserSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleton.swift; sourceTree = "<group>"; };
+		A378EA2A2C74E45700C74AED /* Snap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
 		A3C313F32C7120E00098FC05 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		A3C313F52C7120FD0098FC05 /* UploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVC.swift; sourceTree = "<group>"; };
 		A3C313F72C71213B0098FC05 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				A313EFC22C73AB150056B40B /* UserSingleton.swift */,
+				A378EA2A2C74E45700C74AED /* Snap.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A313EFC32C73AB150056B40B /* UserSingleton.swift in Sources */,
+				A378EA2B2C74E45700C74AED /* Snap.swift in Sources */,
 				A3C313F42C7120E00098FC05 /* FeedVC.swift in Sources */,
 				A3D40DAC2C71099500D67FB2 /* SignInVC.swift in Sources */,
 				A3D40DA82C71099500D67FB2 /* AppDelegate.swift in Sources */,
